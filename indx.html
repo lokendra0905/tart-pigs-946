@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face { 
+  font-family:ProximaNova;
+  font-display:swap;
+  src:url(https://d2v8elt324ukrb.cloudfront.net/static/riotuikit/fonts/ProximaNova-Reg-webfont.e382c667a811.woff2) format('woff2'),
+                   url(https://d2v8elt324ukrb.cloudfront.net/static/riotuikit/fonts/ProximaNova-Reg-webfont.12ccd551e987.woff) format('woff');
+} 
+@font-face { 
+  font-family:ProximaNovaLight;
+  font-display:swap;
+  src:url(https://d2v8elt324ukrb.cloudfront.net/static/riotuikit/fonts/ProximaNova-Light-webfont.7357745905a0.woff2) format('woff2'),
+                   url(https://d2v8elt324ukrb.cloudfront.net/static/riotuikit/fonts/ProximaNova-Light-webfont.17aa4534a407.woff) format('woff');
+} 
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto"); 
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto"); 
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto"); 
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto"); 
+body { 
+    margin: 0;
+} 
+
+html { 
+    font-family:  ProximaNova,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; 
+    font-size:  15px; 
+    font-weight:  normal; 
+    line-height:  1.5; 
+    -webkit-text-size-adjust:  100%; 
+    background:  #fff; 
+    color:  #666; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+    text-rendering: optimizeLegibility;
+} 
+
+.uk-cover-container { 
+    overflow:  hidden; 
+    position:  relative;
+    height: calc(100vh - 200px); 
+    background: black;
+} 
+
+:selection { 
+    background: #39f; 
+    color: #fff; 
+    text-shadow: none;
+} 
+
+img { 
+    vertical-align:  middle;
+    max-width: 100%; 
+    height: auto; 
+    box-sizing: border-box;
+} 
+
+[class*="uk-position-center"] { 
+    position: absolute!important;
+} 
+
+.uk-position-center { 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+    width: max-content; 
+    max-width: 100%; 
+    box-sizing: border-box;
+} 
+
+.uk-cover-container img  { 
+    width: 100%; 
+    height: auto; 
+    max-width: 100%;
+} 
+
+.uk-overlay-primary { 
+    background: rgba(34,34,34,.8);
+} 
+
+.uk-position-cover { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+} 
+
+.uk-overlay-primary { 
+    color:  rgba(255,255,255,.7);
+    background: rgba(34,34,34,.6);
+} 
+
+h1 { 
+    margin:  0 0 20px 0; 
+    font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+    font-weight:  400; 
+    color:  #333; 
+    text-transform:  none;
+    font-size: 2.23125rem; 
+    line-height: 1.2;
+} 
+
+@media (min-width: 960px){ 
+  h1 { 
+    font-size: 2.625rem;
+  } 
+}     
+
+h1 { 
+    font-family:  ProximaNovaLight,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; 
+    font-weight:  300; 
+    color:  #000000;
+    font-size: 30px !important;
+} 
+
+h1 span.block  { 
+    display: block;
+} 
+
+.searchwidgetformcontainer { 
+    background: white; 
+    padding: 10px; 
+    border: 1px solid black;
+} 
+
+.uk-flex { 
+    display: flex;
+} 
+
+.uk-flex-wrap { 
+    flex-wrap: wrap;
+} 
+
+.uk-flex-inline:after,.uk-flex-inline:before,.uk-flex:after,.uk-flex:before { 
+    display: none;
+} 
+
+[class*="uk-width"] { 
+    box-sizing: border-box; 
+    width: 100%; 
+    max-width: 100%;
+} 
+
+@media (min-width: 960px){ 
+  .uk-width-1-3\@m { 
+    width: calc(100% * 1 / 3.001);
+  } 
+}     
+
+[class*="uk-inline"] { 
+    display: inline-block; 
+    position: relative; 
+    max-width: 100%; 
+    vertical-align: middle; 
+    -webkit-backface-visibility: hidden;
+} 
+
+.uk-width-1-2 { 
+    width: 50%;
+} 
+
+@media (min-width: 960px){ 
+  .uk-width-1-6\@m { 
+    width: calc(100% * 1 / 6.001);
+  } 
+}     
+
+.uk-button { 
+    margin: 0; 
+    border: none; 
+    overflow: visible; 
+    font: inherit; 
+    color: inherit; 
+    text-transform: uppercase; 
+    display: inline-block; 
+    box-sizing: border-box; 
+    padding: 0 30px; 
+    vertical-align: middle; 
+    font-size: .875rem; 
+    line-height: 38px; 
+    text-align: center; 
+    text-decoration: none; 
+    transition: .1s ease-in-out; 
+    transition-property: color,background-color,border-color;
+} 
+
+.uk-button-primary { 
+    background-color: #1e87f0; 
+    color: #fff; 
+    border: 1px solid transparent;
+} 
+
+.uk-button:not(:disabled) { 
+    cursor: pointer;
+} 
+
+.uk-button:hover { 
+    text-decoration: none;
+} 
+
+.uk-button-primary:hover { 
+    background-color: #0f7ae5; 
+    color: #fff;
+} 
+
+.uk-icon { 
+    margin: 0; 
+    border: none; 
+    border-radius: 0; 
+    overflow: visible; 
+    font: inherit; 
+    color: inherit; 
+    text-transform: none; 
+    padding: 0; 
+    background-color: transparent; 
+    display: inline-block; 
+    fill: currentcolor; 
+    line-height: 0;
+} 
+
+.uk-form-icon { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    width: 40px; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: #999;
+} 
+
+.uk-form-icon:not(a):not(button):not(input) { 
+    pointer-events: none;
+} 
+
+.uk-form-icon:hover { 
+    color: #666;
+} 
+
+.uk-input { 
+    display: inline-block;
+    box-sizing:     border-box; 
+    margin:     0; 
+    border-radius:     0; 
+    font:     inherit;
+    overflow:    visible;
+    -webkit-appearance:   none;
+    max-width:  100%; 
+    width:  100%; 
+    border:  1px solid #e5e5e5; 
+    padding:  0 10px; 
+    background:  #fff; 
+    color:  #666; 
+    transition:  .2s ease-in-out; 
+    transition-property:  color,background-color,border;
+    height: 40px; 
+    vertical-align: middle; 
+} 
+
+.pac-target-input:not(:-webkit-autofill) { 
+    animation-name: endBrowserAutofill;
+} 
+
+.uk-form-icon:not(.uk-form-icon-flip) ~ .uk-input  { 
+    padding-left: 40px!important;
+} 
+
+.uk-select { 
+    box-sizing:   border-box; 
+    margin:   0; 
+    border-radius:   0; 
+    font:   inherit;
+    text-transform:  none;
+    max-width: 100%; 
+    width: 100%; 
+    border: 1px solid #e5e5e5; 
+    padding: 0 10px; 
+    background: #fff; 
+    color: #666; 
+    transition: .2s ease-in-out; 
+    transition-property: color,background-color,border;
+} 
+
+.uk-select:not([multiple]):not([size]) { 
+    display:  inline-block;
+    height:  40px; 
+    vertical-align:  middle; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    padding-right: 20px; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A"); 
+    background-repeat: no-repeat; 
+    background-position: 100% 50%; 
+    background-repeat-x: no-repeat; 
+    background-repeat-y: no-repeat;
+} 
+
+.uk-hidden { 
+    display: none!important;
+} 
+
+.uk-select:not([multiple]):not([size]) option  { 
+    color: #444;
+} 
+
+
+@keyframes endBrowserAutofill { 
+  0% {  
+  }  
+  100% {  
+  }  
+
+} 
+
+</style>
+<body>
+    <div class="uk-cover-container snipcss-eQKsE">
+        <img src="https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg" class="uk-position-center" uk-image="" alt="Tripvillas Home Page">
+        <div class="uk-overlay-primary uk-position-cover snipcss0-0-0-1">
+        </div>
+        <div class="uk-position-center searchwidgetcontainer">
+          <h1 style="font-weight: bold; color: white;">
+            Book 
+            <span style="text-decoration: line-through;">
+              Hotels
+            </span>
+            Vacation Rentals 
+            <span class="block">
+              Top Holiday Homes - Villas, Apartments &amp;  Homestays
+            </span>
+          </h1>
+          <searchwidget>
+            <form autocomplete="off" onsubmit="return false;">
+              <input autocomplete="false" name="hidden" type="text" style="display:none;">
+              <div class="searchwidgetformcontainer snipcss0-0-0-1 tether-target-attached-top tether-element-attached-top tether-element-attached-center tether-target-attached-center" style="">
+                <div class="uk-flex uk-flex-wrap searchwidgetform snipcss0-1-1-2">
+                  <div class="uk-width-1-1 uk-width-1-3@m uk-inline formelem snipcss0-2-2-3">
+                    <span class="uk-form-icon uk-icon snipcss0-3-3-4" uk-icon="icon: search">
+                      <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="search">
+                        <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7">
+                        </circle>
+                        <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z">
+                        </path>
+                      </svg>
+                    </span>
+                    <input class="uk-input pac-target-input snipcss0-3-3-6" autocomplete="off" type="text" placeholder="Location" id="autocompletegoogle">
+                  </div>
+                  <div class="uk-width-1-2 uk-width-1-6@m uk-inline formelem snipcss0-2-2-7">
+                    <span class="uk-form-icon uk-icon snipcss0-3-7-8" uk-icon="icon: sign-in">
+                      <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="sign-in">
+                        <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3">
+                        </polygon>
+                        <polygon points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
+                        </polygon>
+                      </svg>
+                    </span>
+                    <input class="uk-input snipcss0-3-7-10" readonly="" autocomplete="off" type="text" placeholder="Check In" id="checkin">
+                  </div>
+                  <div class="uk-width-1-2 uk-width-1-6@m uk-inline formelem snipcss0-2-2-11">
+                    <span class="uk-form-icon uk-icon snipcss0-3-11-12" uk-icon="icon: sign-out">
+                      <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="sign-out">
+                        <polygon points="13.1 13.4 12.5 12.8 15.28 10 8 10 8 9 15.28 9 12.5 6.2 13.1 5.62 17 9.5">
+                        </polygon>
+                        <polygon points="13 2 3 2 3 17 13 17 13 16 4 16 4 3 13 3">
+                        </polygon>
+                      </svg>
+                    </span>
+                    <input class="uk-input snipcss0-3-11-14" readonly="" autocomplete="off" type="text" placeholder="Check Out" id="checkout">
+                  </div>
+                  <div class="uk-width-1-1 uk-width-1-6@m formelem snipcss0-2-2-15">
+                    <select class="uk-select snipcss0-3-15-16" id="guests">
+                      <option value="0" class="snipcss0-4-16-17">
+                        Select Guests
+                      </option>
+                      <option value="1" class="snipcss0-4-16-18">
+                        1 guest
+                      </option>
+                      <option value="2" class="snipcss0-4-16-19">
+                        2 guests
+                      </option>
+                      <option value="3" class="snipcss0-4-16-20">
+                        3 guests
+                      </option>
+                      <option value="4" class="snipcss0-4-16-21">
+                        4 guests
+                      </option>
+                      <option value="5" class="snipcss0-4-16-22">
+                        5 guests
+                      </option>
+                      <option value="6" class="snipcss0-4-16-23">
+                        6 guests
+                      </option>
+                      <option value="7" class="snipcss0-4-16-24">
+                        7 guests
+                      </option>
+                      <option value="8" class="snipcss0-4-16-25">
+                        8 guests
+                      </option>
+                      <option value="9" class="snipcss0-4-16-26">
+                        9 guests
+                      </option>
+                      <option value="10" class="snipcss0-4-16-27">
+                        10 guests
+                      </option>
+                      <option value="11" class="snipcss0-4-16-28">
+                        11 guests
+                      </option>
+                      <option value="12" class="snipcss0-4-16-29">
+                        12 guests
+                      </option>
+                      <option value="13" class="snipcss0-4-16-30">
+                        13 guests
+                      </option>
+                      <option value="14" class="snipcss0-4-16-31">
+                        14 guests
+                      </option>
+                      <option value="15" class="snipcss0-4-16-32">
+                        15 guests
+                      </option>
+                      <option value="16" class="snipcss0-4-16-33">
+                        16 guests
+                      </option>
+                      <option value="17" class="snipcss0-4-16-34">
+                        17 guests
+                      </option>
+                      <option value="18" class="snipcss0-4-16-35">
+                        18 guests
+                      </option>
+                      <option value="19" class="snipcss0-4-16-36">
+                        19 guests
+                      </option>
+                      <option value="20" class="snipcss0-4-16-37">
+                        20 guests
+                      </option>
+                      <option value="21" class="snipcss0-4-16-38">
+                        21 guests
+                      </option>
+                      <option value="22" class="snipcss0-4-16-39">
+                        22 guests
+                      </option>
+                      <option value="23" class="snipcss0-4-16-40">
+                        23 guests
+                      </option>
+                      <option value="24" class="snipcss0-4-16-41">
+                        24 guests
+                      </option>
+                      <option value="25" class="snipcss0-4-16-42">
+                        25 guests
+                      </option>
+                      <option value="26" class="snipcss0-4-16-43">
+                        26 guests
+                      </option>
+                      <option value="27" class="snipcss0-4-16-44">
+                        27 guests
+                      </option>
+                      <option value="28" class="snipcss0-4-16-45">
+                        28 guests
+                      </option>
+                      <option value="29" class="snipcss0-4-16-46">
+                        29 guests
+                      </option>
+                      <option value="30" class="snipcss0-4-16-47">
+                        30 guests
+                      </option>
+                      <option value="31" class="snipcss0-4-16-48">
+                        31 guests
+                      </option>
+                      <option value="32" class="snipcss0-4-16-49">
+                        32 guests
+                      </option>
+                      <option value="33" class="snipcss0-4-16-50">
+                        33 guests
+                      </option>
+                      <option value="34" class="snipcss0-4-16-51">
+                        34 guests
+                      </option>
+                      <option value="35" class="snipcss0-4-16-52">
+                        35 guests
+                      </option>
+                      <option value="36" class="snipcss0-4-16-53">
+                        36 guests
+                      </option>
+                      <option value="37" class="snipcss0-4-16-54">
+                        37 guests
+                      </option>
+                      <option value="38" class="snipcss0-4-16-55">
+                        38 guests
+                      </option>
+                      <option value="39" class="snipcss0-4-16-56">
+                        39 guests
+                      </option>
+                      <option value="40" class="snipcss0-4-16-57">
+                        40 guests
+                      </option>
+                      <option value="41" class="snipcss0-4-16-58">
+                        41 guests
+                      </option>
+                      <option value="42" class="snipcss0-4-16-59">
+                        42 guests
+                      </option>
+                      <option value="43" class="snipcss0-4-16-60">
+                        43 guests
+                      </option>
+                      <option value="44" class="snipcss0-4-16-61">
+                        44 guests
+                      </option>
+                      <option value="45" class="snipcss0-4-16-62">
+                        45 guests
+                      </option>
+                      <option value="46" class="snipcss0-4-16-63">
+                        46 guests
+                      </option>
+                      <option value="47" class="snipcss0-4-16-64">
+                        47 guests
+                      </option>
+                      <option value="48" class="snipcss0-4-16-65">
+                        48 guests
+                      </option>
+                      <option value="49" class="snipcss0-4-16-66">
+                        49 guests
+                      </option>
+                      <option value="50" class="snipcss0-4-16-67">
+                        50 guests
+                      </option>
+                    </select>
+                  </div>
+                  <button class="uk-button uk-button-primary uk-width-1-1 uk-width-1-6@m formelem snipcss0-2-2-68" type="button">
+                    <img src="https://d2v8elt324ukrb.cloudfront.net/static/new_template/images/newloader.debee47f900f.gif" class="uk-hidden snipcss0-3-68-69">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </searchwidget>
+          <textarea id="searchwidget" style="display: none;">
+            &lt;form autocomplete="off" onsubmit="return false;"&gt;
+            &lt;input autocomplete="false" name="hidden" type="text" style="display:none;"&gt;
+            &lt;div class="searchwidgetformcontainer" style=""&gt;
+            &lt;div class="uk-flex uk-flex-wrap searchwidgetform"&gt;
+            &lt;div class="uk-width-1-1 uk-width-1-3@m uk-inline formelem"&gt;
+            &lt;span class="uk-form-icon" uk-icon="icon: search"&gt;&lt;/span&gt;
+            &lt;input class="uk-input" autocomplete="false" type="text" placeholder="Location" id="autocompletegoogle"  /&gt;
+            &lt;/div&gt;
+            &lt;div class="uk-width-1-2 uk-width-1-6@m uk-inline formelem"&gt;
+            &lt;span class="uk-form-icon" uk-icon="icon: sign-in"&gt;&lt;/span&gt;
+            &lt;input class="uk-input" readonly autocomplete="off" type="text" placeholder="Check In" id="checkin" /&gt;
+            &lt;/div&gt;
+            &lt;div class="uk-width-1-2 uk-width-1-6@m uk-inline formelem"&gt;
+            &lt;span class="uk-form-icon" uk-icon="icon: sign-out"&gt;&lt;/span&gt;
+            &lt;input class="uk-input" readonly autocomplete="off" type="text" placeholder="Check Out" id="checkout"&gt;
+            &lt;/div&gt;
+            &lt;div class="uk-width-1-1 uk-width-1-6@m formelem"&gt;
+            &lt;select class="uk-select" id="guests" onchange="{setGuests}"&gt;
+            &lt;option each="{ o in occupancies }" value="{o.key}"&gt;{o.value || 'Select Guests'}&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;button disabled="{loading}" class="uk-button uk-button-primary uk-width-1-1 uk-width-1-6@m formelem" type="button" onclick="{handleSearch}"&gt;&lt;img class="{ loading ? '' : 'uk-hidden' }" src="https://d2v8elt324ukrb.cloudfront.net/static/new_template/images/newloader.debee47f900f.gif" /&gt; {loading ? '' : 'Search'}&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div if="{qerror}" class="uk-alert uk-alert-danger" style="margin: 10px 0;"&gt;Location Required. Use autocomplete to select.&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/form&gt;
+          </textarea>
+        </div>
+      </div>
+      
+</body>
+</html>
