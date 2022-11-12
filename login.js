@@ -7,6 +7,7 @@ document.querySelector("#submit").addEventListener("click", details)
 
         if(name == "Lokendra" && email == "lokendra1234@gmail.com" && password == 12345678){
             alert("login Succesfully")
+            location.href ="Index.html"
         } else{
             alert("Invalid Details")
         }
