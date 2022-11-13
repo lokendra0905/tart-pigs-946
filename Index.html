@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Document</title>
 </head>
 <style>
@@ -36,6 +36,11 @@
         padding: 25px;
         margin-right: -50px;
     }
+
+    a {
+        color: white;
+    }
+
 
     #profile>div {
         width: 30%;
@@ -253,13 +258,13 @@
         </div>
         <div id="profile">
             <div>
-                <h3>Profile</h3>
+                <h3><a href="login.html">Profile</a></h3>
             </div>
             <div>
                 <h3>INR</h3>
             </div>
             <div id="menu">
-               
+
             </div>
         </div>
     </div>
@@ -269,9 +274,9 @@
             <h1>Book Hotels Vacation Rentals <br> Top Homes - Villas, Apartments & HomeStays</h1>
             <br>
             <input type="text" placeholder="Location">
-            <input type="date" placeholder="Check In">
-            <input type="date" placeholder="Check Out">
-            <input type="submit" value="Search">
+            <input type="text" placeholder="Check In " onfocus="(this.type='date')">
+            <input type="text" placeholder="Check Out" onfocus="(this.type='date')">
+            <input onclick="result()" type="submit" value="Search">
         </div>
     </div>
     <h1>Top Destinations</h1>
@@ -429,5 +434,10 @@
         </div>
     </div>
 </body>
+<script>
+    function result() {
+        location.href = "result.html"
+    }
+</script>
 
 </html>
