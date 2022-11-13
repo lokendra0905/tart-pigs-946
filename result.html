@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 90%;
+        height: 60%;
+    }
+
+    .div {
+        width: 30%;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        padding: 20px;
+    }
+
+    .faculty {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .faculty>div {
+        border: 1px solid black;
+        padding: 2px;
+    }
+
+    #container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 100px;
+    }
+
+    .button-85 {
+        padding: 0.6em 2em;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        color: rgb(255, 255, 255);
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-85:before {
+        content: "";
+        background: linear-gradient(45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing-button-85 20s linear infinite;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    @keyframes glowing-button-85 {
+        0% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 400% 0;
+        }
+
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+    .button-85:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #222;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div class="div">
+            <img src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/10055185/bdf24a47493411ec8f4f0a5f3ca25ae5_watermarked_image_1024.jpeg"
+                alt="">
+            <h2>1 Bedroom Ac Appartment in Dabolim, GOA</h2>
+            <div class="faculty">
+                <div>Appartment</div>
+                <div>1 Bedroom</div>
+                <div>1 Bathroom</div>
+                <div>WIFI</div>
+                <div>TV</div>
+                <div>AC</div>
+            </div>
+            <h3>Rs. 11000</h3>
+            <button onclick="payment()" class="button-85" role="button">Book Now</button>
+
+        </div>
+        <div class="div">
+            <img src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/13411970/cf3b5649063911ec935f0a5f3ca25ae5_watermarked_image_1024.jpeg"
+                alt="">
+            <h2>AC Studio in Dabolim, GOA</h2>
+            <div class="faculty">
+                <div>Appartment</div>
+                <div>1 Bedroom</div>
+                <div>1 Bathroom</div>
+                <div>WIFI</div>
+                <div>TV</div>
+                <div>AC</div>
+            </div>
+            <h3>Rs. 19000</h3>
+            <button onclick="payment()" class="button-85" role="button">Book Now</button>
+        </div>
+        <div  class="div">
+            <img src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/13411970/deb81067063a11ec935f0a5f3ca25ae5_watermarked_image_1024.jpeg"
+                alt="">
+            <h2>Land Cottages In Kenisha Holiday Homes</h2>
+            <div class="faculty">
+                <div>Room</div>
+                <div>Swimming Pool</div>
+                <div>WIFI</div>
+                <div>TV</div>
+                <div>AC</div>
+            </div>
+            <h3>Rs. 15000</h3>
+            <button onclick="payment()" class="button-85" role="button">Book Now</button>
+        </div>
+    </div>
+</body>
+<script>
+    function payment(){
+        location.href = "Payment.html"
+    }
+</script>
+
+</html>
